@@ -18,4 +18,6 @@ public interface AbsentDao {
   void deleteAbsentById(Long id) throws Exception;
 
   void updateData(Absent absent) throws Exception;
+
+  List<Absent> getListAbsentByEmployee() throws Exception;
 }

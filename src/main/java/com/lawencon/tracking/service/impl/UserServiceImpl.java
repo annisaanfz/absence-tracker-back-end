@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
     user.setEmail(data.getEmail());
     user.setFirstName(data.getFirstName());
     user.setLastName(data.getLastName());
-    user.setUsername(data.getLastName());
+    user.setUsername(data.getUsername());
     user.setPassword(data.getPassword());
     Role role = new Role();
     role.setId(data.getRoleId());

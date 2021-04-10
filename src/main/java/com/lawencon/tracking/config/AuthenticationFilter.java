@@ -74,7 +74,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         response.getWriter().append("{\"token\" : \"" + token + "\",").append("\"profile\" : {")
             .append("\"userId\" : \"" + user.getId() + "\",")
 		.append("\"username\" : \"" + user.getUsername() + "\",")
-            .append("\"roleCode\" : \"" + user.getRole().getName() + "\"}").append("}");
+            .append("\"roleCode\" : \"" + user.getRole().getCode() + "\"}").append("}");
 	}
 
 	@Override

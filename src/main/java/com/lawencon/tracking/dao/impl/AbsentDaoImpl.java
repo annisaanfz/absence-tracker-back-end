@@ -2,6 +2,7 @@ package com.lawencon.tracking.dao.impl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 import com.lawencon.tracking.dao.AbsentDao;
 import com.lawencon.tracking.model.Absent;
@@ -15,6 +16,7 @@ public class AbsentDaoImpl implements AbsentDao {
 
   @Autowired
   private AbsentRepo absentRepo;
+
   @Override
   public List<Absent> getListAbsent() throws Exception {
     return absentRepo.findAll();
@@ -39,5 +41,12 @@ public class AbsentDaoImpl implements AbsentDao {
   public void updateData(Absent absent) throws Exception {
     absentRepo.save(absent);
   }
+
+  @Override
+  public List<Absent> getListAbsentByEmployee() throws Exception {
+    // return absentRepo.findAllByUserOrderByTrxDateDesc();
+    return absentRepo.findAll(Sort.by(Sort.Direction.DESC));
+  }
+
 
 }

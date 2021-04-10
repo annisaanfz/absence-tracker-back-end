@@ -22,7 +22,6 @@ import lombok.Data;
 @Entity
 @Table(name = "tb_r_absents")
 public class Absent {
-  // public static final long serialVersionUID = 1L;
   @Id
   @Column(name = "id", columnDefinition = "varchar DEFAULT uuid_generate_v4()")
   @GeneratedValue(generator = "uuid")
